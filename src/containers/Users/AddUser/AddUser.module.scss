@@ -1,0 +1,26 @@
+@import "../../../theme.scss";
+
+.UsersForm {
+  display: grid;
+  grid-template-columns: auto 50px;
+  border-bottom: 1px solid $themeColor;
+  & > div,
+  & > input {
+    overflow: hidden;
+    min-width: 0;
+  }
+}
+
+.UsersList {
+  display: flex;
+  flex-direction: column;
+}
+
+.UsersItem {
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $themeColor;
+    color: $bgColor;
+  }
+}

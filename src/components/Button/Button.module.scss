@@ -1,0 +1,23 @@
+@import "../../theme.scss";
+
+.Button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+@mixin createType($bgcolor, $fontcolor) {
+  border: 1px solid darken($bgcolor, 5%);
+  background: $bgcolor;
+  color: $fontcolor;
+  &:hover {
+    background: darken($bgcolor, 18%);
+  }
+}
+
+.submit {
+  @include createType($themeColor, $bgColor);
+}
+
+.cancel {
+  @include createType($cancelColor, $black);
+}

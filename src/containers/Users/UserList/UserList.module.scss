@@ -1,0 +1,18 @@
+@import "../../../theme.scss";
+
+.UsersList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.UsersItem {
+  padding: 10px;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    background-color: $themeColor;
+    color: $bgColor;
+  }
+}

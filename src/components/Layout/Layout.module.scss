@@ -1,0 +1,51 @@
+@import "../../theme.scss";
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $headerHeight;
+  display: flex;
+  align-items: center;
+  background: $themeColor;
+  padding-left: 10px;
+  z-index: 1;
+  color: $bgColor;
+}
+
+.Layout {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  padding-top: $headerHeight;
+  background: lighten($bgColor, 20%);
+}
+
+.left,
+.right {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+$handleWidth: 6px;
+$visibleHandleWidth: 2px;
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: $handleWidth;
+  margin-left: -$handleWidth/2;
+  cursor: col-resize;
+
+  &:after {
+    content: "";
+    display: block;
+    left: ($handleWidth - $visibleHandleWidth) / 2;
+    width: $visibleHandleWidth;
+    position: absolute;
+    background: $themeColor;
+    top: 0;
+    bottom: 0;
+  }
+}

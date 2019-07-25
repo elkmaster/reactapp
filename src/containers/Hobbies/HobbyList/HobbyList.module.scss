@@ -1,0 +1,15 @@
+@import "../../../theme.scss";
+
+@import "../Hobbies.module.scss";
+
+.HobbyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.HobbyItem {
+  @extend .row;
+  align-items: center;
+  border-bottom: 1px solid $themeColor;
+  padding-left: 10px;
+}

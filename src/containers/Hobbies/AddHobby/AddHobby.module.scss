@@ -1,0 +1,6 @@
+@import "../Hobbies.module.scss";
+@import "../../../theme.scss";
+.headerRow {
+  @extend .row;
+  border-bottom: 1px solid $themeColor;
+}

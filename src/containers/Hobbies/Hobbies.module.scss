@@ -1,0 +1,17 @@
+@import "../../theme.scss";
+
+.row {
+  display: grid;
+  grid-template-columns: 100px auto 80px 50px;
+  border-bottom: 1px solid $themeColor;
+  & > div,
+  & > input {
+    overflow: hidden;
+    min-width: 0;
+  }
+}
+
+.Loading {
+  padding: 10px;
+  text-align: center;
+}
